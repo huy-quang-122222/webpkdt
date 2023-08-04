@@ -1,0 +1,46 @@
+/* Định dạng container chứa các ảnh nhỏ */
+.container-single .image-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* Định dạng ảnh nhỏ */
+  .container-single.thumbnail {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    cursor: pointer;
+  }
+  
+  /* Định dạng ảnh lớn */
+  .container-single.main-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Định dạng overlay để hiển thị khi rê chuột vào ảnh nhỏ */
+  .container-single.thumbnail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  /* Hiển thị overlay khi rê chuột vào ảnh nhỏ */
+  .container-single.thumbnail:hover .thumbnail-overlay {
+    opacity: 1;
+  }
+  
